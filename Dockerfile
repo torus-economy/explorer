@@ -3,6 +3,8 @@ ARG APP_PATH=/opt/explorer
 
 FROM node:$TAG_NODE
 
+LABEL maintainer="Sven Skender (@sskender)"
+
 ARG APP_PATH
 ENV APP_PATH=$APP_PATH
 
