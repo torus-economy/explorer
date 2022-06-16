@@ -1,6 +1,7 @@
 name: Explorer CI
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
