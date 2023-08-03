@@ -61,7 +61,7 @@ app.use('/ext/getmoneysupply', function(req,res){
 app.use('/ext/getaddressbalance/:address', function(req,res){
   db.get_address(req.params.address, function(address){
     if (address) {
-      const balance = (address.balance).toString().replace(/(^-+)/mg, '');
+      const balance = parseInt((address.balance).toString().replace(/(^-+)/mg, ''));
       res.status(200).send({ data: balance });
     } else {
       res.status(404).send({ data: null })
