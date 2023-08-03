@@ -8,11 +8,11 @@
     "test": "node ./node_modules/jasmine/bin/jasmine.js"
   },
   "dependencies": {
-    "async": "^3.1.0",
-    "bitcoin-core": "^2.0.0",
+    "async": "^3.2.4",
+    "bitcoin-core": "^2.3.0",
     "bitcoin-node-api": "git+http://git@github.com/uaktags/Bitcoin-Node-Api.git",
-    "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.4",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "debug": "~4.1.1",
     "express": "~4.17.1",
@@ -21,16 +21,16 @@
     "intl": "^1.2.5",
     "jsonminify": "0.2.3",
     "jstransformer-markdown-it": "^2.1.0",
-    "mongodb": "^3.4.1",
+    "mongodb": "^3.7.4",
     "mongoose": "5.7.7",
     "morgan": "~1.9.1",
-    "pug": "^2.0.3",
+    "pug": "^2.0.4",
     "qr-image": "~2.0.0",
-    "request": "^2.88.0",
+    "request": "^2.88.2",
     "static-favicon": "~1.0.0",
     "xss-clean": "^0.1.4"
   },
   "devDependencies": {
-    "jasmine": "^3.5.0"
+    "jasmine": "^3.99.0"
   }
 }
