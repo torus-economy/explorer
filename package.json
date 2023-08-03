@@ -13,8 +13,11 @@
     "bitcoin-node-api": "git+http://git@github.com/uaktags/Bitcoin-Node-Api.git",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
     "debug": "~4.1.1",
     "express": "~4.17.1",
+    "express-mongo-sanitize": "^2.2.0",
+    "helmet": "^7.0.0",
     "intl": "^1.2.5",
     "jsonminify": "0.2.3",
     "jstransformer-markdown-it": "^2.1.0",
@@ -24,7 +27,8 @@
     "pug": "^2.0.3",
     "qr-image": "~2.0.0",
     "request": "^2.88.0",
-    "static-favicon": "~1.0.0"
+    "static-favicon": "~1.0.0",
+    "xss-clean": "^0.1.4"
   },
   "devDependencies": {
     "jasmine": "^3.5.0"
