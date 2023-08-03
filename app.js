@@ -2,6 +2,10 @@ var express = require('express')
   , path = require('path')
   , bitcoinapi = require('bitcoin-node-api')
   , favicon = require('static-favicon')
+  , cors = require('cors')
+  , helmet = require('helmet')
+  , mongoSanitize = require('express-mongo-sanitize')
+  , xss = require('xss-clean')
   , logger = require('morgan')
   , cookieParser = require('cookie-parser')
   , bodyParser = require('body-parser')
@@ -38,12 +42,20 @@ if (settings.heavy != true) {
     'getmaxvote', 'getphase', 'getreward', 'getnextrewardestimate', 'getnextrewardwhenstr',
     'getnextrewardwhensec', 'getsupply', 'gettxoutsetinfo', 'verifymessage']);
 }
+// security middleware
+app.use(helmet({
+  contentSecurityPolicy: false
+}));
+app.use(cors());
+app.use(xss());
+app.use(mongoSanitize());
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use(favicon(path.join(__dirname, settings.favicon)));
-app.use(logger('dev'));
+app.use(logger('common'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
