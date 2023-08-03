@@ -58,6 +58,17 @@ app.use('/ext/getmoneysupply', function(req,res){
   });
 });
 
+app.use('/ext/getaddressbalance/:address', function(req,res){
+  db.get_address(req.params.address, function(address){
+    if (address) {
+      const balance = (address.balance).toString().replace(/(^-+)/mg, '');
+      res.status(200).send({ data: balance });
+    } else {
+      res.status(404).send({ data: null })
+    }
+  });
+});
+
 app.use('/ext/getaddress/:hash', function(req,res){
   db.get_address(req.params.hash, function(address){
     db.get_address_txs_ajax(req.params.hash, 0, settings.txcount, function(txs, count){
