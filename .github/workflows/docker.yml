@@ -7,9 +7,7 @@ on:
       - master
 
 jobs:
-
   build-docker:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -21,7 +19,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ secrets.REGISTRY_USER }}
-          password: ${{ secrets.REGISTRY_PASSWORD }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build explorer latest
         run: DOCKER_BUILDKIT=1 docker build --tag ghcr.io/torus-economy/explorer:latest .
