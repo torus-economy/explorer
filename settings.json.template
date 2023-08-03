@@ -5,15 +5,15 @@
 */
 {
   // name your instance!
-  "title": "IQUIDUS",
+  "title": "Torus Explorer",
 
-  "address": "127.0.0.1:3001",
+  "address": "0.0.0.0:3000",
 
   // coin name
-  "coin": "Darkcoin",
+  "coin": "Torus",
 
   // coin symbol
-  "symbol": "DRK",
+  "symbol": "TRS",
 
   // logo
   "logo": "/images/logo.png",
@@ -29,17 +29,17 @@
   //     Lux, Materia, Minty, Pulse, Sandstone, Simplex, Sketchy, Slate, 
   //     Solar, Spacelab, Superhero, United, Yeti
   // theme (see /public/themes for available themes)
-  "theme": "Cyborg",
+  "theme": "United",
 
   // port to listen for requests on.
-  "port" : 3001,
+  "port" : 3000,
 
   // database settings (MongoDB)
   "dbsettings": {
-    "user": "iquidus",
-    "password": "3xp!0reR",
-    "database": "explorerdb",
-    "address": "localhost",
+    "user": "XXX",
+    "password": "XXX",
+    "database": "XXX",
+    "address": "x.x.x.x",
     "port": 27017
   },
 
@@ -52,10 +52,10 @@
   "use_rpc": true,
 
   "wallet": {
-    "host": "localhost",
-    "port": 9332,
-    "username": "darkcoinrpc",
-    "password": "123gfjk3R3pCCVjHtbRde2s5kzdf233sa"
+    "host": "XXX",
+    "port": 24112,
+    "username": "XXX",
+    "password": "XXX"
   },
 
   // confirmations
@@ -66,10 +66,10 @@
 
   // menu settings
   "display": {
-    "api": true,
-    "markets": true,
+    "api": false,
+    "markets": false,
     "richlist": true,
-    "twitter": true,
+    "twitter": false,
     "facebook": false,
     "googleplus": false,
     "youtube": false,
@@ -83,12 +83,12 @@
 
   // index page (valid options for difficulty are POW, POS or Hybrid)
   "index": {
-    "show_hashrate": true,
+    "show_hashrate": false,
     // Show Market Cap in header
     "show_market_cap": false,
     // Show Market Cap in place of price box
     "show_market_cap_over_price": false,
-    "difficulty": "POW",
+    "difficulty": "POS",
     "last_txs": 100,
     "txs_per_page": 10
   },
@@ -105,7 +105,7 @@
   //included markets: altmarkets, fides, bittrex, poloniex, yobit, bleutrade
   //default market is loaded by default and determines last price in header
   "markets": {
-    "coin": "JBS",
+    "coin": "TRS",
     "exchange": "BTC",
     "enabled": ["bittrex"],
     "ccex_key" : "Get-Your-Own-Key",
@@ -125,18 +125,18 @@
   "movement": {
     "min_amount": 100,
     "low_flag": 1000,
-    "high_flag": 5000
+    "high_flag": 50000
   },
 
   // twitter, facebook, googleplus, youtube
-  "twitter": "iquidus",
-  "facebook": "yourfacebookpage",
-  "googleplus": "yourgooglepluspage",
-  "youtube": "youryoutubechannel",
+  //"twitter": "iquidus",
+  //"facebook": "yourfacebookpage",
+  //"googleplus": "yourgooglepluspage",
+  //"youtube": "youryoutubechannel",
 
   //genesis
-  "genesis_tx": "65f705d2f385dc85763a317b3ec000063003d6b039546af5d8195a5ec27ae410",
-  "genesis_block": "b2926a56ca64e0cd2430347e383f63ad7092f406088b9b86d6d68c2a34baef51",
+  "genesis_tx": "cdc376c01136ce03cbdf5c6faa1eeaaddaff9d2e40a4fdb2825b1cff8e123de6",
+  "genesis_block": "000005a39de532e9f2546ad8c954a21f01e0064f3edc9fea108f39e0499a011d",
 
   //heavy (enable/disable additional heavy features)
   "heavy": false,
@@ -157,12 +157,12 @@
   // HEAVY: retreive from heavys getsupply api call
   // BALANCES : total of all address balances
   // TXOUTSET : retreive from gettxoutsetinfo api call
-  "supply": "COINBASE",
+  "supply": "GETINFO",
 
   // how to acquire network hashrate
   // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
   // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
-  "nethash": "getnetworkhashps",
+  "nethash": "netmhashps",
 
   // nethash unitd: sets nethash API return units
   // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
