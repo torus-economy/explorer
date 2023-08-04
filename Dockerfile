@@ -4,7 +4,7 @@ ARG APP_PATH=/opt/explorer
 
 FROM node:$TAG_NODE
 
-LABEL org.opencontainers.image.source=https://github.com/torus-economy/explorer
+LABEL org.opencontainers.image.source="https://github.com/torus-economy/explorer"
 LABEL org.opencontainers.image.description="Torus block explorer"
 LABEL maintainer="Sven Skender (@sskender)"
 
