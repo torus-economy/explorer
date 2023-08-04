@@ -31,8 +31,8 @@
 
   // database settings (MongoDB)
   "dbsettings": {
-    "user": "",
-    "password": "",
+    "user": "explorer",
+    "password": "t0ru53xp!0reRdb",
     "database": "explorerdb",
     "address": "database",
     "port": 27017

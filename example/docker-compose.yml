@@ -4,6 +4,9 @@ services:
   database:
     container_name: database
     image: mongo:4.0
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=explorer
+      - MONGO_INITDB_ROOT_PASSWORD=t0ru53xp!0reRdb
     volumes:
       - "$HOME/.explorer/db:/data/db"
     restart: always
