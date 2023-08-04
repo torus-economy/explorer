@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  database:
+    container_name: database
+    image: mongo:4.0
+    volumes:
+      - "$HOME/.explorer/db:/data/db"
+    restart: always
+
+  torusd:
+    container_name: torusd
+    image: ghcr.io/torus-economy/torusd:latest
+    ports:
+      - "24111:24111"
+    volumes:
+      - "$HOME/.TORUS:/root/.TORUS"
+      - "./TORUS.conf:/root/.TORUS/TORUS.conf:ro"
+    restart: always
+
+  explorer:
+    container_name: explorer
+    image: ghcr.io/torus-economy/explorer:latest
+    depends_on:
+      - database
+      - torusd
+    ports:
+      - "80:3000"
+    volumes:
+      - "./settings.json:/opt/explorer/settings.json:ro"
+    restart: always
