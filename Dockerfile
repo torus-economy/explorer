@@ -17,8 +17,9 @@ COPY . .
 
 ENV NODE_ENV=production
 
-RUN npm install --production
+RUN npm install --omit=dev
 
+RUN chmod +x sync.sh
 RUN rm tmp/delete.me
 RUN chown -R node:node tmp \
     && chmod -R 750 tmp \

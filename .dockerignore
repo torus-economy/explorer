@@ -247,3 +247,4 @@ settings.json
 .gitignore
 Dockerfile
 .dockerignore
+/example
